@@ -94,6 +94,8 @@
   become: yes
   become_method: runas
   become_user: SYSTEM
+  retries: 20
+  delay: 30
 
 - name: Get Install Drive
   win_shell: $env:SYSTEMDRIVE
